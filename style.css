@@ -1,0 +1,131 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* COLOR VARIABLES */
+:root {
+  --bg-light: #f7f8f9;
+  --bg-dark: #1f2933;
+  --accent: #3a7d7c;
+  --text-dark: #1a1a1a;
+  --text-light: #ffffff;
+}
+
+/* BASE STYLES */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.7;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+}
+
+/* HERO */
+.hero {
+  height: 80vh;
+  background-image: url("imgs/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-text {
+  position: relative;
+  color: var(--text-light);
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  letter-spacing: 0.5px;
+}
+
+.hero p {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* LAYOUT CONTAINER */
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* SECTIONS */
+section {
+  padding: 4rem 1.5rem;
+}
+
+.about {
+  background-color: white;
+}
+
+.memory {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.memory h2 {
+  color: var(--accent);
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+}
+
+p {
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--bg-dark);
+  color: #ccc;
+  text-align: center;
+  padding: 1.25rem;
+  font-size: 0.85rem;
+}
+
+/* BREAKPOINT 1 — TABLET */
+@media (min-width: 600px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  section {
+    padding: 5rem 3rem;
+  }
+
+  p {
+    font-size: 1.05rem;
+  }
+}
+
+/* BREAKPOINT 2 — DESKTOP */
+@media (min-width: 900px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+}

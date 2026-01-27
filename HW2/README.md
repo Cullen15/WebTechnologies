@@ -1,1 +1,1 @@
-This is my website for my HW2 assignment
+This is my website for my HW2 assignment. 
