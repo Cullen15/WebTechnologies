@@ -1,0 +1,83 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE STYLES — MOBILE FIRST */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #ffffff;
+}
+
+/* HERO */
+.hero {
+  height: 70vh;
+  background-image: url("imgs/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* parallax */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-text {
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 6px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* SECTIONS */
+section {
+  padding: 2rem 1.25rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f2f2f2;
+  font-size: 0.9rem;
+}
+
+/* BREAKPOINT 1 — TABLET */
+@media (min-width: 600px) {
+  section {
+    padding: 3rem 3rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* BREAKPOINT 2 — DESKTOP */
+@media (min-width: 900px) {
+  main {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  body {
+    font-size: 1.05rem;
+  }
+}
