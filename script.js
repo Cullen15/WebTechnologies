@@ -21,5 +21,5 @@ console.log("3. Casey Neistat – influenced digital filmmaking and YouTube cult
 // Question and Answer Interaction
 let userAnswer = prompt("What is a hobby of yours?");
 
-console.log();
+console.log(What is a hobby of yours?);
 console.log(userAnswer);
