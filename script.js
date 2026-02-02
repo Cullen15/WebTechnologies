@@ -19,7 +19,7 @@ console.log("2. Red Bull Media House – changed action sports storytelling");
 console.log("3. Casey Neistat – influenced digital filmmaking and YouTube culture");
 
 // Question and Answer Interaction
-let userAnswer = prompt("What is your favorite type of game?");
+let userAnswer = prompt("What is a hobby of yours?");
 
-console.log("What is your favorite hobby:");
+console.log();
 console.log(userAnswer);
