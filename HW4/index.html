@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cullen | Bob Marshall Adventure</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="top">
+    <h1 id="title">Bob Marshall Hike</h1>
+    <p class="subtitle">Outside Seeley Lake, Montana.</p>
+  </header>
+
+  <main class="layout">
+    <section class="card">
+      <img id="sceneImg" src="imgs/trailhead.jpg" alt="Bob Marshall scene" />
+
+      <div class="content">
+        <h2 id="sceneHeading">Trailhead</h2>
+
+        <p id="storyText">
+          You’re hiking into the Bob Marshall Wilderness outside Seeley Lake. It’s early, quiet,
+          and it feels like you’re completely out there. The trail looks good, but the weather
+          could change fast. What’s your move?
+        </p>
+
+        <div id="choices" class="choices"></div>
+
+        <div class="status">
+          <span>Risk:</span>
+          <strong id="riskValue">0</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <button id="restartBtn" class="ghost">Restart</button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
