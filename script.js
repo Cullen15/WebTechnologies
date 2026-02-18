@@ -10,7 +10,7 @@ const goBtn = document.getElementById("goBtn");
 const hintEl = document.getElementById("hintText");
 const decisionCountEl = document.getElementById("decisionCount");
 
-// 5+ options across the story (you’ll have more than 5 total)
+
 const scenes = {
   start: {
     heading: "Trailhead",
@@ -62,12 +62,12 @@ const scenes = {
   }
 };
 
-// function that RETURNS a value (required)
+// RETURNS a value 
 function cleanInput(str) {
   return str.trim().toLowerCase();
 }
 
-// function with parameters (required)
+// function with parameters 
 function setScene(key) {
   const s = scenes[key];
   scene = key;
@@ -77,7 +77,7 @@ function setScene(key) {
   optionsEl.textContent = s.options.join(" / ");
   imgEl.src = s.img;
 
-  // Update styles from JS (required)
+  // Update styles from JS 
   document.body.style.background = s.bg;
 
   hintEl.textContent = "";
@@ -85,7 +85,7 @@ function setScene(key) {
   inputEl.focus();
 }
 
-// loop requirement (while)
+// loop 
 function isValidChoice(choice, list) {
   let i = 0;
   while (i < list.length) {
@@ -98,11 +98,11 @@ function isValidChoice(choice, list) {
 function handleChoice(raw) {
   const choice = cleanInput(raw);
 
-  // track decisions (DOM update)
+  // track decisions 
   decisions = decisions + 1;
   decisionCountEl.textContent = decisions;
 
-  // end scene restart question (if/else requirement)
+  // end scene restart question 
   if (scene === "end") {
     if (choice === "yes") {
       decisions = 0;
@@ -129,7 +129,7 @@ function handleChoice(raw) {
     return;
   }
 
-  // switch requirement
+  // switch
   switch (choice) {
     case "trail":
     case "river":
