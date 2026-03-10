@@ -1,0 +1,82 @@
+:root{
+  --bg:#0b1220;
+  --card: rgba(255,255,255,0.08);
+  --text:#eaf0ff;
+  --muted: rgba(234,240,255,0.75);
+  --accent:#3a7d7c;
+  --danger:#ff5a5f;
+}
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height:100vh;
+}
+
+.top{ padding: 2rem 1.25rem 1rem; text-align:center; }
+.subtitle{ color: var(--muted); margin-top:.5rem; }
+
+.layout{ padding: 1rem 1.25rem 2rem; display:flex; justify-content:center; }
+
+.card{
+  width:100%;
+  max-width:900px;
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius:16px;
+  overflow:hidden;
+}
+
+#sceneImg{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  display:block;
+}
+
+.content{ padding: 1.25rem; }
+h2{ margin-bottom:.75rem; }
+#storyText{ color: var(--muted); line-height:1.7; margin-bottom:1rem; }
+
+.options{ color: var(--muted); margin:.75rem 0; }
+
+.inputRow{
+  display:flex;
+  gap:.5rem;
+  margin: .75rem 0 .25rem;
+  flex-wrap:wrap;
+}
+
+input{
+  flex:1;
+  min-width:200px;
+  padding:.8rem .9rem;
+  border-radius:12px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.10);
+  color: var(--text);
+}
+
+button{
+  padding:.8rem 1rem;
+  border-radius:12px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.12);
+  color: var(--text);
+  cursor:pointer;
+}
+
+.hint{ min-height:1.2rem; color: rgba(234,240,255,0.9); }
+.status{ margin-top:.75rem; color: var(--muted); }
+
+/* Breakpoints */
+@media (min-width:650px){
+  #sceneImg{ height:340px; }
+  .content{ padding:1.75rem; }
+}
+@media (min-width:900px){
+  #sceneImg{ height:380px; }
+}
