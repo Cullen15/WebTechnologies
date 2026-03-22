@@ -3,30 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ViewMaster Social Justice Viewer</title>
+  <title>Living Poster</title>
+
   <link rel="stylesheet" href="style.css">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <main class="viewer">
-    <h1>ViewMaster Social Justice Viewer</h1>
-    <p class="intro">
-      This is a small collection of images and artworks that connect to social justice
-      issues from around the world. Click the button to view a new slide.
-    </p>
+  <div id="poster">
+    <h1>CHAOS TO CALM</h1>
 
-    <div class="slide-box">
-      <img id="slideImage" src="imgs/migrant-mother.jpg" alt="Social justice slide">
-      <h2 id="slideTitle">Slide Title</h2>
-      <p id="slideDescription">Slide description goes here.</p>
-      <p class="meta">
-        <span id="slideAuthor">Author</span> •
-        <span id="slideYear">Year</span>
-      </p>
+    <div id="imageBox">
+      <img id="mainImage" src="" alt="poster image">
     </div>
 
-    <button id="nextButton">View Next Slide</button>
-  </main>
+    <div id="textBox"></div>
 
-  <script src="script.js"></script>
+    <div id="shape1" class="shape circle"></div>
+    <div id="shape2" class="shape square"></div>
+    <div id="shape3" class="shape pill"></div>
+  </div>
 </body>
 </html>
