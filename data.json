@@ -1,0 +1,29 @@
+{
+  "movies": [
+    {
+      "title": "Interstellar",
+      "year": 2014,
+      "genre": "Sci-Fi"
+    },
+    {
+      "title": "The Dark Knight",
+      "year": 2008,
+      "genre": "Action"
+    },
+    {
+      "title": "Inception",
+      "year": 2010,
+      "genre": "Sci-Fi"
+    },
+    {
+      "title": "Parasite",
+      "year": 2019,
+      "genre": "Thriller"
+    },
+    {
+      "title": "Everything Everywhere All At Once",
+      "year": 2022,
+      "genre": "Sci-Fi"
+    }
+  ]
+}

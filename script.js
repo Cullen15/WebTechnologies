@@ -1,74 +1,40 @@
-$(function(){
+$(document).ready(function () {
 
-let images=[
-"imgs/image1.jpg",
-"imgs/image2.jpg",
-"imgs/image3.jpg"
-];
+  $.getJSON("data.json", function (data) {
 
-let text=[
-"breathe",
-"rest matters",
-"stay curious",
-"connect",
-"keep going"
-];
+    data.movies.forEach(function (movie) {
+      $("#movieContainer").append(`
+        <div class="movieCard">
+          <h3>${movie.title}</h3>
+          <p><strong>Year:</strong> ${movie.year}</p>
+          <p><strong>Genre:</strong> ${movie.genre}</p>
+        </div>
+      `);
+    });
 
-let colors=["#ffb74d","#81d4fa","#a5d6a7"];
+    $(".movieCard").highlightCard();
 
-let imgIndex=0;
-let textIndex=0;
-let shapeIndex=0;
-
-function randomPos(max){
-return Math.floor(Math.random()*max);
-}
-
-function imageLoop(){
-$("#mainImage").attr("src",images[imgIndex]);
-
-$("#imageBox")
-.css({left:randomPos(500),top:randomPos(400)})
-.fadeIn(800)
-.animate({left:randomPos(500),top:randomPos(400)},3000)
-.fadeOut(800,function(){
-imgIndex=(imgIndex+1)%images.length;
-imageLoop();
-});
-}
-
-function textLoop(){
-$("#textBox")
-.fadeOut(300,function(){
-$(this)
-.text(text[textIndex])
-.css({left:randomPos(600),top:randomPos(400)})
-.fadeIn(300);
-});
-
-textIndex=(textIndex+1)%text.length;
-}
-
-function shapeLoop(){
-$(".shape").each(function(){
-$(this)
-.removeClass("circle square pill")
-.addClass(["circle","square","pill"][shapeIndex])
-.css({
-background:colors[shapeIndex],
-left:randomPos(600),
-top:randomPos(400)
-});
-});
-
-shapeIndex=(shapeIndex+1)%3;
-}
-
-imageLoop();
-textLoop();
-shapeLoop();
-
-setInterval(textLoop,4000);
-setInterval(shapeLoop,3000);
+  }).fail(function () {
+    $("#movieContainer").html("<p>Could not load the JSON file. Try opening the project with Live Server.</p>");
+  });
 
 });
+
+$.fn.highlightCard = function () {
+  return this.each(function () {
+    $(this).hover(
+      function () {
+        $(this).css({
+          background: "#dfe6ff",
+          transform: "scale(1.05)"
+        });
+      },
+      function () {
+        $(this).css({
+          background: "white",
+          transform: "scale(1)"
+        });
+      }
+    );
+  });
+};
