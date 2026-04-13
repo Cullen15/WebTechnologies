@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background: #dddddd;
+  background: #e6e6e6;
 }
 
 canvas {
@@ -10,3 +10,14 @@ canvas {
   display: block;
   margin: 20px auto;
 }
+
+button {
+  margin: 10px;
+  padding: 10px 16px;
+  font-size: 16px;
+}
+
+audio {
+  display: block;
+  margin: 10px auto;
+} 
