@@ -24,7 +24,15 @@ class Player {
 
   draw() {
     ctx.fillStyle = this.color;
-    ctx.fillRect(this.x, this.y, this.width, this.height);
+    ctx.beginPath();
+    ctx.arc(
+      this.x + this.width / 2,
+      this.y + this.height / 2,
+      this.width / 2,
+      0,
+      Math.PI * 2
+    );
+    ctx.fill();
   }
 
   move() {
@@ -83,14 +91,23 @@ class Collectible {
   }
 
   draw() {
-    if (this.active) {
-      ctx.fillStyle = this.color;
-      ctx.fillRect(this.x, this.y, this.width, this.height);
-    }
+    if (!this.active) return;
+
+    const centerX = this.x + this.width / 2;
+    const centerY = this.y + this.height / 2;
+
+    ctx.fillStyle = this.color;
+    ctx.beginPath();
+    ctx.moveTo(centerX, this.y);
+    ctx.lineTo(this.x + this.width, centerY);
+    ctx.lineTo(centerX, this.y + this.height);
+    ctx.lineTo(this.x, centerY);
+    ctx.closePath();
+    ctx.fill();
   }
 }
 
-const player = new Player(30, 30, 30, 30, "blue", 3);
+const player = new Player(30, 30, 30, 30, "#2a6fdb", 3);
 
 function hasCollided(obj1, obj2) {
   return (
@@ -111,9 +128,19 @@ function hasCollidedBox(x, y, width, height, obj2) {
 }
 
 function drawScore() {
-  ctx.fillStyle = "black";
+  ctx.fillStyle = "#222";
   ctx.font = "24px Arial";
   ctx.fillText("Score: " + score, 20, 30);
+}
+
+function drawWinMessage() {
+  const remaining = collectibles.filter(item => item.active);
+
+  if (remaining.length === 0) {
+    ctx.fillStyle = "#2f4858";
+    ctx.font = "36px Arial";
+    ctx.fillText("You collected them all!", 245, 300);
+  }
 }
 
 function checkCollectibles() {
@@ -133,6 +160,7 @@ function drawEverything() {
 
   player.draw();
   drawScore();
+  drawWinMessage();
 }
 
 function update() {

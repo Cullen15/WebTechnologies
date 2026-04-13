@@ -1,6 +1,6 @@
 [
-  { "x": 80, "y": 80, "width": 20, "height": 20, "color": "gold" },
-  { "x": 700, "y": 120, "width": 20, "height": 20, "color": "gold" },
-  { "x": 650, "y": 500, "width": 20, "height": 20, "color": "gold" },
-  { "x": 100, "y": 500, "width": 20, "height": 20, "color": "gold" }
+  { "x": 80, "y": 80, "width": 18, "height": 18, "color": "#46b5a7" },
+  { "x": 700, "y": 120, "width": 18, "height": 18, "color": "#46b5a7" },
+  { "x": 650, "y": 500, "width": 18, "height": 18, "color": "#46b5a7" },
+  { "x": 100, "y": 500, "width": 18, "height": 18, "color": "#46b5a7" }
 ]
