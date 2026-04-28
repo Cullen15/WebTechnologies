@@ -1,0 +1,9 @@
+# Reflection
+
+The biggest thing I learned from this project is how different working in 3D space is compared to 2D. In something like Canvas or Phaser, everything is pretty straightforward because you’re just dealing with x and y positions. With Three.js, you also have to think about depth z, camera position, and how everything is viewed from different angles. It made me realize that where you place the camera is just as important as where you place the objects. Which is something I didn’t really have to think about before.
+
+The most challenging part for me was definitely getting the model to load and actually look right in the scene. At first it wasn’t showing up at all and then when it finally did, it was way too big and basically covered the whole screen. I had to mess around with the scale and position a lot to get it to look normal. I wanted it ot feel like you are in the crevasse of a rock. I also had some issues with getting Three.js to even run because of the module errors, so I used AI to help me figure out what was wrong and how to fix it. That helped a lot because I probably wouldn’t have figured that out on my own as fast.
+
+For my scene I wasn’t trying to do anything super crazy. I just wanted something simple. I used a cube, a sphere, and the rock model to create a basic 3D setup with movement and rotation. The goal was just to have something that looked clean and showed motion in a few different ways without overcomplicating it. I thought it was interesting because the longer I looked at it the more dizzy I became. 
+
+If I had more time, I would probably try to make it more interactive, like being able to move the camera around or control something in the scene. I’d also want to experiment more with lighting and maybe different types of models. Overall, I think the part I’m most interested in learning more about is how to make scenes more interactive and feel more like an actual game or experience instead of just a demo.
