@@ -1,0 +1,3 @@
+# Reflection
+
+I really appreciated all of the feedback and guidance throughout the semester. It helped me improve a lot and better understand what I was building during the projects and assignments. I feel like I learned a lot in this class and gained a much better understanding of coding and interactive web design. I also enjoyed the class and all of the different projects we worked on throughout the semester. I hope you have great summer! 
